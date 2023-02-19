@@ -3,7 +3,7 @@ package vehiculo;
 
 /**
  *
- * @author IES Aguadulce
+ * @author Francisco Javier Gómez Gamero
  */
 public class Main {
     

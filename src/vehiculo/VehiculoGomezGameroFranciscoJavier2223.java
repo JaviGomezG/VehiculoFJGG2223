@@ -2,8 +2,22 @@
 package vehiculo;
 
 /**
- *
- * @author IES Aguadulce
+ * Clase que representa un <strong>teatro</strong> y la gestión de sus obras y
+ * entradas.<p>
+ * Los objetos de esta clase permiten almacenar y gestionar información sobre el
+ * propiio teatro (código, nombre y aforo) así como de las obras que se están
+ * representando y de las entradas vendidas.</p>
+ * <p>
+ * La clase también dispone de información general independiente de los objetos
+ * concretos que se hayan creado. Es el caso de:</p>
+ * <ul>
+ * <li><strong>número de teatros</strong> creados hasta el momento;</li>
+ * <li><strong>cantidad total de obras activas</strong> en el momento actual,
+ * o</li>
+ * <li><strong>cantidad total de entradas vendidas</strong> para todos los
+ * teatros y todas las obras.</li>
+ * </ul>
+ * @author Francisco Javier Gómez Gamero
  */
 public class VehiculoGomezGameroFranciscoJavier2223 {
 
