@@ -2,26 +2,18 @@
 package vehiculo;
 
 /**
- * Clase que representa un <strong>teatro</strong> y la gestión de sus obras y
- * entradas.<p>
- * Los objetos de esta clase permiten almacenar y gestionar información sobre el
- * propiio teatro (código, nombre y aforo) así como de las obras que se están
- * representando y de las entradas vendidas.</p>
- * <p>
- * La clase también dispone de información general independiente de los objetos
- * concretos que se hayan creado. Es el caso de:</p>
- * <ul>
- * <li><strong>número de teatros</strong> creados hasta el momento;</li>
- * <li><strong>cantidad total de obras activas</strong> en el momento actual,
- * o</li>
- * <li><strong>cantidad total de entradas vendidas</strong> para todos los
- * teatros y todas las obras.</li>
- * </ul>
+ * Clase que representa la gestión vehículos.
+ * Los objetos de esta clase permiten almacenar información
+ * de los propios vehñiculos (nombre, precio y stock)
+ * Se implementan metodos para comprar y vender vehículos, así como
+ * métodos para establecer y obtener los parámetros.
+ * 
  * @author Francisco Javier Gómez Gamero
  */
 public class VehiculoGomezGameroFranciscoJavier2223 {
 
     /**
+     * Método para obtener el nombre asignado al vehículo.
      * @return the nombre
      */
     public String getNombre() {
@@ -29,13 +21,15 @@ public class VehiculoGomezGameroFranciscoJavier2223 {
     }
 
     /**
-     * @param nombre the nombre to set
+     * Método para establecer el nombre del vehículo.
+     * @param nombre nombre a establecer
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
+     * Método para obtener el precio asignado al vehículo.
      * @return the precio
      */
     public double getPrecio() {
@@ -43,13 +37,15 @@ public class VehiculoGomezGameroFranciscoJavier2223 {
     }
 
     /**
-     * @param precio the precio to set
+     * Método para establecer el precio del vehículo.
+     * @param precio precio a establecer
      */
     public void setPrecio(double precio) {
         this.precio = precio;
     }
 
     /**
+     * Método para obtener el precio con IVA asignado al vehículo.
      * @return the precioIVA
      */
     public double getPrecioIVA() {
@@ -57,13 +53,15 @@ public class VehiculoGomezGameroFranciscoJavier2223 {
     }
 
     /**
-     * @param precioIVA the precioIVA to set
+     * Método para establecer el precio con IVA del vehículo.
+     * @param precioIVA precio con IVA a establecer
      */
     public void setPrecioIVA(double precioIVA) {
         this.precioIVA = precioIVA;
     }
 
     /**
+     * Método para obtener el stock de vehículos.
      * @return the stock
      */
     public int getStock() {
@@ -71,6 +69,7 @@ public class VehiculoGomezGameroFranciscoJavier2223 {
     }
 
     /**
+     * Método para establecer el stocks de vehículos.
      * @param stock the stock to set
      */
     public void setStock(int stock) {
@@ -82,38 +81,58 @@ public class VehiculoGomezGameroFranciscoJavier2223 {
     private double precioIVA;
     private int stock;
 
-    /* Constructor sin argumentos */
+    /**Constructor sin parámetros.
+     * Crea un nuevo objeto <code>VehiculoGomezGameroFranciscoJavier2223</code> 
+     * sin parámetros establecidos.
+     */
     public VehiculoGomezGameroFranciscoJavier2223 ()
     {
     }
-    // Constructor con parámetro para iniciar todas las propiedades de la clase
-    
-    
+    /**Constructor de 3 parámetros (nombre, precio y stock). 
+     * Crea un nuevo objeto <code>VehiculoGomezGameroFranciscoJavier2223</code> con el nombre, precio y stock indicado en los
+     * parámetros.
+     * @param nom nombre del vehículo
+     * @param precio precio del vehículo
+     * @param stock stock inicial de vehículos
+     */       
     public VehiculoGomezGameroFranciscoJavier2223 (String nom, double precio, int stock)
     {
         this.nombre =nom;
         this.precio=precio;
         this.stock=stock;
     }
-   // Método para asignar el nombre del vehiculo
+   /** 
+    * Método para asignar el nombre del vehiculo
+    * @param nom nombre a asignar al vehículo 
+    */
     public void asignarNombre(String nom)
     {
         setNombre(nom);
     }
-    // Método que me devuelve el nombre del vehiculo
+    /**
+     * Método para obtener el nombre del vehículo.
+     * @param nombre 
+     */
     public String obtenerNombre()
     {
         return getNombre();
     }
 
-    // Método que me devuelve el stock de vehiculos disponible en cada momento
+    /**
+     * Método para obtener el stocks de vehículos.
+     * @param stock
+     */
      public int obtenerStock ()
     {
         return getStock();
     }
 
-    /* Método para comprar vehiculos. Modifica el stock.
-     * Este método va a ser probado con Junit
+    /**
+     * Comprar Vehiculos.
+     * Método para comprar un número determinado de vehículos
+     * Este método modifica el stock.
+     * @param cantidad Número de vehículos a comprar.
+     * @throws Exception Si el nº de vehículos a comprar es negativo.
      */
     public void comprar(int cantidad) throws Exception
     {
@@ -121,7 +140,15 @@ public class VehiculoGomezGameroFranciscoJavier2223 {
             throw new Exception("No se puede comprar un nº negativo de vehiculos");
         setStock(getStock() + cantidad);
     }
-
+    
+    /**
+     * Vender Vehiculos.
+     * Método para vender un número determinado de vehículos
+     * Este método modifica el stock.
+     * @param cantidad Número de vehículos a vender.
+     * @throws Exception Si el nº de vehículos a vender es negativo.
+     * @throws Exception Si no hay stock suficiente para vender.
+     */
     public void vender (int cantidad) throws Exception
     {
         if (cantidad <= 0)

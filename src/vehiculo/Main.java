@@ -2,7 +2,9 @@
 package vehiculo;
 
 /**
- *
+ * Clase main del programa Vehiculos.
+ * Define un objeto VehiculoGomezGameroFranciscoJavier2223 con unos parámetros definidos
+ * y realiza acciones de comprar y vender modificando el stock.
  * @author Francisco Javier Gómez Gamero
  */
 public class Main {
